@@ -15,5 +15,5 @@ public class RedisConfig {
 		jc.setPort(6379);
 		jc.setPassword(""); // by default is null...
 		return jc;
-	}
+	} 
 }
