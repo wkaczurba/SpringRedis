@@ -8,4 +8,12 @@ import org.springframework.context.annotation.Bean;
 
 @Configuration
 public class RedisConfig {
+	@Bean
+	public RedisConnectionFactory redisConnectionFactory() {
+		JedisConnectionFactory jc = new JedisConnectionFactory();
+		jc.setHostName("localhost");
+		jc.setPort(6379);
+		jc.setPassword(""); // by default is null...
+		return jc;
+	}
 }
